@@ -1,5 +1,5 @@
 (function(){
-	const API_BASE = 'http://localhost:4000/api';
+	const API_BASE = 'https://quizora1.onrender.com/api';
 
 	function saveAuth(token, user){
 		try {
