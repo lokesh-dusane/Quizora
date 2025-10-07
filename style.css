@@ -791,6 +791,65 @@ footer .btn:hover {
 	opacity: .7;
 }
 
+footer .left-col a {
+	color: #E5E8EF !important;
+	text-decoration: underline;
+}
+footer .left-col a:hover {
+	opacity: .85;
+}
+
+.user-menu {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	margin-left: 15px;
+}
+.user-menu .avatar {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: #df8c27;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	cursor: pointer;
+	user-select: none;
+}
+.user-menu .user-name {
+	margin-left: 8px;
+	font-weight: 600;
+	color: #2E3D49;
+	cursor: pointer;
+}
+.user-menu .dropdown {
+	position: absolute;
+	top: 44px;
+	right: 0;
+	background: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 6px 18px rgba(0,0,0,.12);
+	border-radius: 8px;
+	min-width: 200px;
+	z-index: 1500;
+}
+.user-menu .dropdown-header {
+	padding: 10px 12px;
+	font-weight: 600;
+	border-bottom: 1px solid #f0f0f0;
+}
+.user-menu .dropdown-item {
+	padding: 10px 12px;
+	width: 100%;
+	text-align: left;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+.user-menu .dropdown-item:hover { background: #fafafa; }
+
 /*PROPERTIES FOR MAKING WEBSITE RESPONSIVE*/
 @media screen and (max-width: 960px) {
 	.footer-container {

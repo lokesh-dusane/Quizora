@@ -15,8 +15,8 @@
   			if($(window).scrollTop()){
   			  $('nav').addClass('black');
  			 }else {
- 		   $('nav').removeClass('black');
- 		 }
+		   $('nav').removeClass('black');
+		 }
 		})
 	</script>
 </head>
@@ -36,6 +36,15 @@
 			</ul>
 			<div class="srch"><input type="text" class="search" placeholder="What do you want to search..."><img src="images/search.png" alt="search" onclick=slide()></div>
 			<a class="get-started" href="login.html">Start Your Path with Us</a>
+			<!-- User profile dropdown -->
+			<div id="user-menu" class="user-menu" style="display:none;">
+				<div class="avatar" id="user-avatar">U</div>
+				<div class="user-name" id="user-badge">User</div>
+				<div class="dropdown" id="user-dropdown" style="display:none;">
+					<div class="dropdown-header" id="dropdown-identity">Signed in</div>
+					<button id="logout-btn" class="dropdown-item">Logout</button>
+				</div>
+			</div>
 			<img src="images//menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
 		</nav>
 		<div class="head-container">
@@ -94,7 +103,7 @@
 						<br><br>We are passionate about transforming education.<br><br>						
 						Join us on this exciting journey! At Quizora, we believe that education is not just about grades; it's about growth.<br><br> Together, let's unlock the doors to knowledge, explore new horizons, and pave the way for a brighter future.</p>
 				</div>
-		</div>
+			</div>
 	</div>
 
 
@@ -185,17 +194,17 @@
 		<div class="csec"></div>
 		<div class="back-contact">
 			<div class="cc">
-			<form action="mailto:teamtaral05@gmail.com" method="post" enctype="text/plain">
+			<form action="mailto:teamtaral05@gmail.com?subject=Website%20Contact" method="post" enctype="text/plain">
 				<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
 				<center>
-				<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
+				<input type="text" name="First Name" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="Last Name" style="width: 175px" required="required"><br>
 				</center>
 				<label>Email <span class="imp">*</span></label><br>
-				<input type="email" name="mail" style="width: 100%" required="required"><br>
+				<input type="email" name="Email" style="width: 100%" required="required"><br>
 				<label>Message <span class="imp">*</span></label><br>
-				<input type="text" name="message" style="width: 100%" required="required"><br>
+				<input type="text" name="Message" style="width: 100%" required="required"><br>
 				<label>Additional Details</label><br>
-				<textarea name="addtional"></textarea><br>
+				<textarea name="Additional Details"></textarea><br>
 				<button type="submit" id="csubmit">Send Message</button>
 			</form>
 			</div>
@@ -213,13 +222,13 @@
 
 	<div class="feedbox">
 		<div class="feed">
-			<form action="mailto:teamtarl05@gmail.com" method="post" enctype="text/plain">
+			<form action="mailto:teamtaral05@gmail.com?subject=Website%20Feedback" method="post" enctype="text/plain">
 				<label>Your Name</label><br>
-				<input type="text" name="" class="fname" required="required"><br>
+				<input type="text" name="Name" class="fname" required="required"><br>
 				<label>Email</label><br>
-				<input type="email" name="mail" required="required"><br>
+				<input type="email" name="Email" required="required"><br>
 				<label>Additional Details</label><br>
-				<textarea name="addtional"></textarea><br>
+				<textarea name="Feedback"></textarea><br>
 				<button type="submit" id="csubmit">Send Message</button>
 			</form>
 		</div>
@@ -243,19 +252,20 @@
 				</div><br><br>
 				<p class="rights-text">Copyright © 2024 ,All Rights Reserved.</p>
 				<br><p><img src="images/location.png">Nashik<br>Maharshtra-422003</p><br>
-				<p><img src="images/phone.png"> +91-123456468<br><img src="images/mail.png">&nbsp; teamtaral05@gmail.com</p>
+				<p><img src="images/phone.png"> +91-123456468<br><img src="images/mail.png">&nbsp; <a href="mailto:teamtaral05@gmail.com">teamtaral05@gmail.com</a></p>
 			</div>
 			<div class="right-col">
 				<h1 style="color: #fff">Our Newsletter</h1>
 				<div class="border"></div><br>
 				<p>Enter Your Email to get our News and updates.</p>
-				<form class="newsletter-form">
-					<input class="txtb" type="email" placeholder="Enter Your Email">
+				<form class="newsletter-form" action="mailto:teamtaral05@gmail.com?subject=Newsletter%20Signup" method="post" enctype="text/plain">
+					<input class="txtb" type="email" name="Email" placeholder="Enter Your Email">
 					<input class="btn" type="submit" value="Submit">
 				</form>
 			</div>
 		</div>
 	</footer>
 
+	<script type="text/javascript" src="auth.js"></script>
 </body>
 </html>

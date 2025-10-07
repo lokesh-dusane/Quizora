@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>My Profile</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div style="max-width:800px;margin:120px auto 40px;background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.08);padding:24px;">
+		<h2>My Profile</h2>
+		<div id="profile-card" style="display:flex;align-items:center;margin-top:16px;">
+			<div class="avatar" id="profile-avatar" style="width:48px;height:48px;border-radius:50%;background:#df8c27;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">U</div>
+			<div style="margin-left:12px;">
+				<div id="profile-name" style="font-size:18px;font-weight:700;">User</div>
+				<div id="profile-email" style="color:#555;">user@example.com</div>
+			</div>
+		</div>
+		<button id="back-home" style="margin-top:20px;padding:10px 16px;border:1px solid #eee;border-radius:8px;background:#fafafa;cursor:pointer;">Back to Home</button>
+	</div>
+	<script src="auth.js"></script>
+	<script>
+		(function(){
+			var u = window.Auth && Auth.getUser ? Auth.getUser() : null;
+			if(!u){
+				window.location.href = 'login.html';
+				return;
+			}
+			document.getElementById('profile-name').textContent = u.name || u.email;
+			document.getElementById('profile-email').textContent = u.email || '';
+			var initials = (function(name,email){
+				var source = (name||email||'U').trim();
+				var parts = source.split(/\s+/).filter(Boolean);
+				if(parts.length===1) return parts[0].slice(0,1).toUpperCase();
+				return (parts[0].slice(0,1)+parts[1].slice(0,1)).toUpperCase();
+			})(u.name,u.email);
+			document.getElementById('profile-avatar').textContent = initials;
+			document.getElementById('back-home').onclick = function(){ window.location.href = 'index.html'; };
+		})();
+	</script>
+</body>
+</html>

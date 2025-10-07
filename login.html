@@ -9,8 +9,9 @@
   <!-- It will redirect to the Home Page after submitting the form -->
   <script>
   $(document).ready(function(){
-    $("form").submit(function(){
-      alert("Great Job !");
+    $("form").submit(function(e){
+      // Handled by auth.js
+      e.preventDefault();
     });
   });
   </script>
@@ -61,5 +62,6 @@
 			</form>
 		</div>
 		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="auth.js"></script>
 </body>
 </html>
